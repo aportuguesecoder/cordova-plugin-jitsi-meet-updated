@@ -24,7 +24,7 @@
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 		</config-file>
 		<source-file src='src/android/JitsiPlugin.java' target-dir='src/com/cordova/plugin/jitsi/' />
-		<framework src='src/android/jitsiplugin.gradle' custom='true' type='gradleReference' />
+		<framework src='src/android/JitsiPlugin.gradle' custom='true' type='gradleReference' />
 	</platform>
 
 	<!-- ios -->
@@ -34,6 +34,19 @@
                 <param name="ios-package" value="JitsiPlugin"/>
             </feature>
         </config-file>
+		
+		<config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+        	<string>This application needs camera access.</string>
+		</config-file>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+        	<string>This application needs microphone access.</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+        	<string>This application needs read/write-access photo library access.</string>
+		</config-file>
+		<config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+		    <string>need location access to find things nearby</string>
+		</config-file>
 
 		<header-file src="src/ios/JitsiMeetView.h" />
 		<header-file src="src/ios/JitsiMeetViewDelegate.h" />
@@ -42,6 +55,13 @@
 
         <framework src="./framework/JitsiMeet.framework" custom="true" />
         <framework src="./framework/WebRTC.framework" custom="true" />
+		
+		<hook type="after_plugin_install" src="hooks/WebRTC.js" />
+		<hook type="before_build" src="hooks/WebRTC.js" />
+
+		<hook type="after_plugin_install" src="hooks/Jitsi.js" />
+		<hook type="before_build" src="hooks/Jitsi.js" />
+
 
     </platform>
 </plugin>
