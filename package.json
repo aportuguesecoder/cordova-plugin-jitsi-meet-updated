@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-jitsi-meet-updated",
+  "version": "1.0.2",
+  "description": "\n       This is plugin for Jitsi Meet calling service!\n    ",
+  "cordova": {
+    "id": "cordova-plugin-jitsi-updated",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aportuguesecoder/cordova-plugin-jitsi-meet-updated"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Various",
+  "license": "Auris",
+  "bugs": {
+    "url": "https://github.com/aportuguesecoder/cordova-plugin-jitsi-meet-updated/issues"
+  },
+  "homepage": "https://github.com/aportuguesecoder/cordova-plugin-jitsi-meet-updated#readme"
+}
