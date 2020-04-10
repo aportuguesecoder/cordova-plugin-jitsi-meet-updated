@@ -1,4 +1,4 @@
-Note: this plugin is a indirect fork of https://github.com/findmate/cordova-plugin-jitsi-meet
+Note: this plugin is an indirect fork of https://github.com/findmate/cordova-plugin-jitsi-meet
 
 # cordova-plugin-jitsi-meet
 Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
